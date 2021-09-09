@@ -5,7 +5,7 @@ var program = `
 // Configure the web server URL
 // 
 // Put your own URL here.
-web_server_url(_url) :- concat("https:/", "logic.aau.dk/proplog", _url).
+web_server_url(_url) :- concat("https:/", "/logic.aau.dk/proplog", _url).
 
 //
 // Note: This hack with 'concat' is necessary because 
