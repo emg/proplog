@@ -22,6 +22,7 @@ The purpose of this file is twofold:
 sensitive information, such as a PostgreSQL password.
 
 """
+import os
 
 # Your website hostname
 ALLOWED_HOSTS = ['proplog.example.com']
