@@ -21,7 +21,7 @@ import os
 # 2. Edit for your situation
 # $ vi local_settings.py
 #
-import local_settings
+from . import local_settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
