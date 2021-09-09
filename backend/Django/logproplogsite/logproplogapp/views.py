@@ -60,7 +60,7 @@ def log(request):
 
 def dump(request):
     if not request.user.is_authenticated:
-        return HttpResponseRedirect('/applet/')
+        return root_view(request)
     else:
         import csv
         from django.http import HttpResponse
@@ -164,7 +164,7 @@ def dump(request):
 
 def dump2(request):
     if not request.user.is_authenticated:
-        return HttpResponseRedirect('/applet/')
+        return root_view(request)
     else:
         import csv
         from django.http import HttpResponse
@@ -245,7 +245,7 @@ def dump3(request):
     """
     
     if not request.user.is_authenticated:
-        return HttpResponseRedirect('/applet/')
+        return root_view(request)
     else:
         import csv
         from django.http import HttpResponse
