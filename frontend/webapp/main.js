@@ -220,7 +220,8 @@ myurlbase(_urlbase) :-
         // at the top of this file.
         web_server_url(_url),
         // Now build the rest of it.
-	concat(_url, "/logproplog/log/?", _urlbase).
+	concat(_url, "/logproplog/log/?", _urlbase),
+        write(_urlbase), nl.
 
 sendURL(_query) :-
     myurlbase(_urlstring1),
