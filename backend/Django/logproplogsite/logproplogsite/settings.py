@@ -147,5 +147,4 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-
-
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
