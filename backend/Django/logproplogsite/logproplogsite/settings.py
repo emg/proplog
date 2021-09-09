@@ -34,8 +34,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=bohf%8r(6u=&_o39d%b*=%^=ntj&(n^k!3rk)6id3dqanbis*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-DEV = True
+DEBUG = local_settings.DEBUG
+DEV = local_settings.DEV
 
 ALLOWED_HOSTS = local_settings.ALLOWED_HOSTS + ['127.0.0.1']
 
@@ -86,16 +86,7 @@ WSGI_APPLICATION = 'logproplogsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-if DEV:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
-    # not DEV
-    DATABASES = local_settings.DATABASES
+DATABASES = local_settings.DATABASES
 
 
 # Password validation

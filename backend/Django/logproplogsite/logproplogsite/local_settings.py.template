@@ -26,15 +26,30 @@ sensitive information, such as a PostgreSQL password.
 # Your website hostname
 ALLOWED_HOSTS = ['proplog.example.com']
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-# Your database connection parameters
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST' : 'localhost',
-        'NAME': 'proplog',
-        'USER' : 'proplog',
-        'PORT' : 5432,
-        'PASSWORD' : 'secrit',
+# Set this to True for development, False for production.
+DEV = True
+
+
+if DEV:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    # not DEV
+    # Your database connection parameters
+    DATABASES = {
+    	'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'HOST' : 'localhost',
+            'NAME': 'proplog',
+            'USER' : 'proplog',
+            'PORT' : 5432,
+            'PASSWORD' : 'secrit',
+        }
+    }
