@@ -1,16 +1,16 @@
 var prolog = new PrologPlusCG.PPCGJS("#console");
 
 var program = `
+
+// Configure the web server URL
+// 
+// Put your own URL here.
+web_server_url(_url) := concat("https:/", "logic.aau.dk/proplog", _url),
+
 //
-// In order for this to work across the Internet, the PPCGApplet.jar 
-// which accompanies this file must be signed with the following command:
-//
-// jarsigner PPCGApplet.jar YourKeyName
-//
-// The key can be generated (first!) with:
-//
-// keytool -genkey -keyalg rsa -alias YourKeyName
-//
+// Note: This hack with 'concat' is necessary because 
+// https:// would be read as https: followed by a comment. 
+// This is a bug in the Prolog+CG lexer.
 
 reset :- retract(reaction(_)), fail.
 reset.
@@ -216,8 +216,11 @@ log_answer(_validity, _correct) :-
 
 
 myurlbase(_urlbase) :-
-	// This hack is necessary because https:// is read as https: followed by a comment. This is a bug in the Prolog+CG lexer.
-	concat("https:/", "/logic.aau.dk/logproplog/log/?", _urlbase).
+        // First get the url of the web server installation, defined 
+        // at the top of this file.
+        web_server_url(_url),
+        // Now build the rest of it.
+	concat(_url, "/logproplog/log/?", _urlbase).
 
 sendURL(_query) :-
     myurlbase(_urlstring1),
