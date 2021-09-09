@@ -1,5 +1,5 @@
 # proplog
-Educational Quiz on Propositional Logic
+Educational Quiz on Propositional Logic. With logging.
 
 ## What is this?
 
