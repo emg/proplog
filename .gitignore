@@ -7,6 +7,8 @@ backend/Django/logproplogsite/logproplogsite/local_settings.py
 # Emacs save files
 *~
 
+# Django static files directory
+backend/Django/logproplogsite/static/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
