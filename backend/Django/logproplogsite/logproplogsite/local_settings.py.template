@@ -27,11 +27,28 @@ import os
 # Your website hostname
 ALLOWED_HOSTS = ['proplog.example.com']
 
+# SECURITY WARNING: keep the secret key used in production secret!
+# To create a new one:
+# $ source /path/to/virtualenv/bin/activate
+# cd /path/to/logproplogsite
+# python manage.py shell
+# >>> from django.core.management.utils import get_random_secret_key
+# >>> print(get_random_secret_key())
+# Now exit python and copy/paste it here.
+SECRET_KEY = '@@@FIXME: Create new one@@@'
+
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # Set this to True for development, False for production.
 DEV = True
+
+
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 if DEV:
@@ -54,3 +71,4 @@ else:
             'PASSWORD' : 'secrit',
         }
     }
+
