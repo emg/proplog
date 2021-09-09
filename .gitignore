@@ -4,6 +4,9 @@ frontend/.jsweet/
 # Local copies of files
 backend/Django/logproplogsite/logproplogsite/local_settings.py
 
+# Emacs save files
+*~
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
