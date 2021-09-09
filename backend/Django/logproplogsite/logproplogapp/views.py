@@ -9,7 +9,7 @@ from logproplogapp.models import *
 
 
 def root_view(request):
-    return HttpResponseRedirect('/applet/') # Just redirect
+    return HttpResponseRedirect('/proplog/applet/') # Just redirect
 
 def getValue(request, key, bValid):
     if not bValid:
