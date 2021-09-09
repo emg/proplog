@@ -1,38 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jsweet</groupId>
-	<artifactId>jsweet-quickstart</artifactId>
-	<version>2.0.0</version>
-	<name>JSweet v2 quick start</name>
-	<description>A simple project structure to get started with JSweet v2</description>
-	<developers>
-		<developer>
-			<id>rpawlak</id>
-			<name>Renaud Pawlak</name>
-			<email>renaud.pawlak@gmail.com</email>
-		</developer>
-	</developers>
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+	<groupId>dk.aau.logic</groupId>
+	<artifactId>proplog-jsweet</artifactId>
+	<version>1.0.0</version>
+	<name>PropLog Java to JavaScript transpilation of Prolog+CG</name>
+	<description>A quiz on propositional logic, with logging of questions and answers</description>
 	<pluginRepositories>
-		<pluginRepository>
-			<id>jsweet-plugins-release</id>
-			<name>plugins-release</name>
-			<url>http://repository.jsweet.org/artifactory/plugins-release-local</url>
-		</pluginRepository>
-		<pluginRepository>
-			<snapshots />
-			<id>jsweet-plugins-snapshots</id>
-			<name>plugins-snapshot</name>
-			<url>http://repository.jsweet.org/artifactory/plugins-snapshot-local</url>
-		</pluginRepository>
-	</pluginRepositories>
+          <pluginRepository>
+            <id>jsweet-plugins-release</id>
+            <name>plugins-release</name>
+            <url>http://repository.jsweet.org/artifactory/plugins-release-local</url>
+          </pluginRepository>
+          <pluginRepository>
+            <id>jsweet-central</id>
+            <name>libs-release</name>
+            <url>http://repository.jsweet.org/artifactory/libs-release-local</url>
+          </pluginRepository>
+	</pluginRepositories>	
 	<repositories>
 		<repository>
 			<id>jsweet-central</id>
@@ -60,7 +45,7 @@
 			<plugin>
 				<groupId>org.jsweet</groupId>
 				<artifactId>jsweet-maven-plugin</artifactId>
-				<version>2.0.0</version>
+				<version>3.1.0</version>
 				<configuration>
 					<verbose>true</verbose>
 					<tsOut>target/ts</tsOut>
