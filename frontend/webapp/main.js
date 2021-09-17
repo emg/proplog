@@ -1,6 +1,13 @@
 var prolog = new PrologPlusCG.PPCGJS("#console");
 
 var program = `
+//
+// Copyright (c) 2010-2021 Peter Oehrstroem and Ulrik Sandborg-Petersen
+//
+// License terms: MIT License.
+// See LICENSE in the PropLog distribution.
+//
+
 
 // Configure the web server URL
 // 
@@ -11,7 +18,6 @@ web_server_url(_url) :- concat("https:/", "/logic.aau.dk/proplog", _url).
 // Note: This hack with 'concat' is necessary because 
 // https:// would be read as https: followed by a comment. 
 // This is a bug in the Prolog+CG lexer.
-
 reset :- retract(reaction(_)), fail.
 reset.
 
