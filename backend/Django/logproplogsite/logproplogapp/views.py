@@ -3,13 +3,13 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.contrib.auth.models import User, Group
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseForbidden, HttpResponse
 
 from logproplogapp.models import *
 
 
 def root_view(request):
-    return HttpResponseRedirect('/proplog/applet/') # Just redirect
+    return HttpResponseRedirect('/proplog/') # Just redirect
 
 def getValue(request, key, bValid):
     if not bValid:
@@ -60,7 +60,7 @@ def log(request):
 
 def dump(request):
     if not request.user.is_authenticated:
-        return root_view(request)
+        return HttpResponseForbidden()
     else:
         import csv
         from django.http import HttpResponse
@@ -164,7 +164,7 @@ def dump(request):
 
 def dump2(request):
     if not request.user.is_authenticated:
-        return root_view(request)
+        return HttpResponseForbidden()
     else:
         import csv
         from django.http import HttpResponse
@@ -245,7 +245,7 @@ def dump3(request):
     """
     
     if not request.user.is_authenticated:
-        return root_view(request)
+        return HttpResponseForbidden()
     else:
         import csv
         from django.http import HttpResponse
