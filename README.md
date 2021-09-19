@@ -22,6 +22,7 @@ Collaborators:
 - Professor Peter Øhrstrøm, dr.scient., ph.d., Aalborg University.
 - Professor Steinar Thorvaldsen, dr.scient.
 - Professor Thomas Ploug, ph.d., Aalborg University.
+- Associate Professor David Jakobsen, ph.d., Aalborg University
 - Affiliated Researcher Ulrik Sandborg-Petersen, ph.d, Aalborg University
 
 
